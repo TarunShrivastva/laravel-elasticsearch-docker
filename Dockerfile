@@ -36,6 +36,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
+# Pull Elastic Search Image Version 7.5.2
+RUN docker pull docker.elastic.co/elasticsearch/elasticsearch:7.5.2
+
 # Copy existing application directory contents
 COPY . /var/www
 
