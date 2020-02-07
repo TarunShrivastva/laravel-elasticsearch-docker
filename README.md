@@ -1,5 +1,3 @@
-
-
 cd ~/laravel-docker
 
 docker run --rm -v $(pwd):/app composer install
